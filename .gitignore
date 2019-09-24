@@ -3,4 +3,3 @@
 node_modules
 .env
 now.json
-hasura/config.yaml
