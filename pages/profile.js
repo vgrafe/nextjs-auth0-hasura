@@ -5,7 +5,7 @@ import { fetchUser } from '../lib/user';
 import Layout from '../components/Layout';
 
 const Profile = ({ user }) => (
-  <Layout user={user}>
+  <Layout>
     <h1>Profile</h1>
 
     <div>
