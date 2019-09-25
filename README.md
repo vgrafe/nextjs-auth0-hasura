@@ -1,5 +1,12 @@
 # NextJS - Auth0 - Hasura
 
+## short term todo
+
+- need the actual user ID once logged in
+  - add the user id to the claims in the auth0 rule?
+  - revert to using auth0id as pk on the user table? (would need user merging, paid plan)
+  - load user from DB instead of just oauth (so we get all info + row id)?
+
 ## Install
 
 - clone
