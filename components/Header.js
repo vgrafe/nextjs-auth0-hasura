@@ -34,15 +34,15 @@ const Header = () => {
               <>
                 <li>
                   {/* You can use <Link /> here too */}
-                  <a href="/profile">Profile</a>
+                  <a href="/profile">profile</a>
                 </li>
                 <li>
-                  <a href="/api/logout">Logout</a>
+                  <a href="/api/logout">logout</a>
                 </li>
               </>
             ) : (
               <li>
-                <a href="/api/login">Login</a>
+                <a href="/api/login">login</a>
               </li>
             ))}
         </ul>
