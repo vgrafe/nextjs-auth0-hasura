@@ -4,21 +4,17 @@ import auth0 from '../lib/auth0';
 import { fetchUser } from '../lib/user';
 import Layout from '../components/Layout';
 
-const Profile = ({ user }) => (
+const Profile = session => (
   <Layout>
-    <h1>Profile</h1>
-
-    <div>
-      <h3>Profile (server rendered)</h3>
-      <pre>{JSON.stringify(user, null, 2)}</pre>
-    </div>
+    <h1>JWT Profile</h1>
+    <pre>{JSON.stringify(session, null, 2)}</pre>
   </Layout>
 );
 
 Profile.getInitialProps = async ({ req, res }) => {
   if (typeof window === 'undefined') {
-    const { user } = await auth0.getSession(req);
-    if (!user) {
+    const session = await auth0.getSession(req);
+    if (!session) {
       res.writeHead(302, {
         Location: '/api/login'
       });
@@ -26,11 +22,11 @@ Profile.getInitialProps = async ({ req, res }) => {
       return;
     }
 
-    return { user };
+    return session;
   }
 
-  const user = await fetchUser();
-  return { user };
+  const session = await fetchUser();
+  return session;
 };
 
 export default Profile;

@@ -54,18 +54,15 @@
     "@apollo/react-hooks" "^3.1.1"
     tslib "^1.10.0"
 
-"@auth0/nextjs-auth0@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@auth0/nextjs-auth0/-/nextjs-auth0-0.1.0.tgz#f481d8279185d568e78af85db812e2db87338df4"
-  integrity sha512-qDoiWuiY4KyUvdkWGJ42/jR9yjzSZElLjmYnIs1MIE9D7BdEzcJ2Qn3tbp97gkcIxblTwmfRb7T20T0Cd94gHg==
+"@auth0/nextjs-auth0@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@auth0/nextjs-auth0/-/nextjs-auth0-0.2.0.tgz#c489fded6d10a5d28fc0485ff02e6394e28ed95c"
+  integrity sha512-uY5JuIEQ2rZWxNAgMIjd/8YRKyl6Xd3++Ow4qERqQGO4n5RymJBEBfRG/Xtt+HlWrt+W+7Xh8HxFgzYdLxOCxA==
   dependencies:
     "@hapi/iron" "^5.1.1"
     base64url "^3.0.1"
     cookie "^0.4.0"
-    next "^9.0.5"
     openid-client "^3.6.2"
-    react "^16.9.0"
-    react-dom "^16.9.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
   version "7.5.5"
@@ -2609,10 +2606,10 @@ graphql-tag@2.10.1:
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.10.1.tgz#10aa41f1cd8fae5373eaf11f1f67260a3cad5e02"
   integrity sha512-jApXqWBzNXQ8jYa/HLkZJaVw9jgwNqZkywa2zfFn16Iv1Zb7ELNHkJaXHR7Quvd5SIGsy6Ny7SUKATgnu05uEg==
 
-graphql@14.5.7:
-  version "14.5.7"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.5.7.tgz#8646a3fcc07922319cc3967eba4a64b32929f77f"
-  integrity sha512-as410RMJSUFqF8RcH2QWxZ5ioqHzsH9VWnWbaU+UnDXJ/6azMDIYPrtXCBPXd8rlunEVb7W8z6fuUnNHMbFu9A==
+graphql@14.5.8:
+  version "14.5.8"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.5.8.tgz#504f3d3114cb9a0a3f359bbbcf38d9e5bf6a6b3c"
+  integrity sha512-MMwmi0zlVLQKLdGiMfWkgQD7dY/TUKt4L+zgJ/aR0Howebod3aNgP5JkgvAULiR2HPVZaP2VEElqtdidHweLkg==
   dependencies:
     iterall "^1.2.2"
 
