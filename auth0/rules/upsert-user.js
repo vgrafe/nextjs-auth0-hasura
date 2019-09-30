@@ -1,11 +1,10 @@
 function upsertUser(user, context, callback) {
   const userId = user.user_id;
-  const nickname = user.nickname;
 
   const QUERY_BODY = {
     query:
-      'mutation ($userId: bpchar!, $nickname: String) {  insert_user(objects: {name: $nickname, auth0_user_id: $userId}, on_conflict: {constraint: user_auth0_user_id_key, update_columns: name}) {    affected_rows  }}',
-    variables: { userId: userId, nickname: nickname }
+      'mutation ($userId: bpchar!) {  insert_user(objects: { auth0_user_id: $userId}, on_conflict: {constraint: user_auth0_user_id_key, update_columns: []}) {    affected_rows  }}',
+    variables: { userId: userId }
   };
 
   request.post(
