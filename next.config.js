@@ -1,5 +1,4 @@
-const { parsed: localEnv } = require('dotenv').config();
-const webpack = require('webpack');
+require('dotenv').config();
 
 module.exports = {
   env: {
