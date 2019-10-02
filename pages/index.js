@@ -1,12 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import Layout from '../components/Layout';
+import Layout from '../components/layout'
+import { useFetchUser } from '../lib/user'
 
-export default function Home() {
+function Home () {
+  const { user, loading } = useFetchUser()
+
   return (
-    <Layout>
-      <h1>Next.js + Auth0 + Hasura</h1>
-      {/* 
+    <Layout user={user} loading={loading}>
+      <h1>Next.js and Auth0 Example</h1>
+
       {loading && <p>Loading login info...</p>}
 
       {!loading && !user && (
@@ -24,9 +27,13 @@ export default function Home() {
       {user && (
         <>
           <h4>Rendered user info on the client</h4>
-          <pre>{JSON.stringify(user, null, 2)}</pre>
+          <img src={user.picture} alt='user picture' />
+          <p>nickname: {user.nickname}</p>
+          <p>name: {user.name}</p>
         </>
-      )} */}
+      )}
     </Layout>
-  );
+  )
 }
+
+export default Home

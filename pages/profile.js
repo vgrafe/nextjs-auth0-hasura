@@ -1,32 +1,33 @@
 import React from 'react';
 
-import auth0 from '../lib/auth0';
-import { fetchUser } from '../lib/user';
-import Layout from '../components/Layout';
+// This import is only needed when checking authentication status directly from getInitialProps
+// import auth0 from '../lib/auth0'
+import { useFetchUser } from '../lib/user';
+import Layout from '../components/layout';
 
-const Profile = session => (
-  <Layout>
-    <h1>JWT Profile</h1>
-    <pre>{JSON.stringify(session, null, 2)}</pre>
-  </Layout>
-);
+function ProfileCard({ user }) {
+  return (
+    <>
+      <h1>Profile</h1>
 
-Profile.getInitialProps = async ({ req, res }) => {
-  if (typeof window === 'undefined') {
-    const session = await auth0.getSession(req);
-    if (!session) {
-      res.writeHead(302, {
-        Location: '/api/login'
-      });
-      res.end();
-      return;
-    }
+      <div>
+        <h3>Profile (client rendered)</h3>
+        <img src={user.picture} alt="user picture" />
+        <p>nickname: {user.nickname}</p>
+        <p>name: {user.name}</p>
+      </div>
+    </>
+  );
+}
 
-    return session;
-  }
+function Profile() {
+  const { user, loading } = useFetchUser({ required: true });
 
-  const session = await fetchUser();
-  return session;
-};
+  return (
+    <Layout user={user} loading={loading}>
+      {loading ? <>Loading...</> : <ProfileCard user={user} />}
+    </Layout>
+  );
+}
 
 export default Profile;

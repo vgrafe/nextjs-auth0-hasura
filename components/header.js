@@ -1,10 +1,6 @@
 import Link from 'next/link';
 
-import { useUser } from '../lib/user';
-
-const Header = () => {
-  const { user, loading } = useUser();
-
+function Header({ user, loading }) {
   return (
     <header>
       <nav>
@@ -33,16 +29,22 @@ const Header = () => {
             (user ? (
               <>
                 <li>
-                  {/* You can use <Link /> here too */}
-                  <a href="/profile">profile</a>
+                  <Link href="/profile">
+                    <a>profile</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/api/logout">logout</a>
+                  <Link href="/advanced/ssr-profile">
+                    <a>ssr-profile</a>
+                  </Link>
+                </li>
+                <li>
+                  <a href="/api/logout">Logout</a>
                 </li>
               </>
             ) : (
               <li>
-                <a href="/api/login">login</a>
+                <a href="/api/login">Login</a>
               </li>
             ))}
         </ul>
@@ -84,6 +86,6 @@ const Header = () => {
       `}</style>
     </header>
   );
-};
+}
 
 export default Header;
