@@ -2,6 +2,10 @@
 
 You might want to get familiar with [nextjs' auth0 example](https://github.com/zeit/next.js/tree/canary/examples/auth0) first. This template leans heavily on it, and just adds Hasura on top of it.
 
+## Demo
+
+Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/)!
+
 ## Shortcomings - Help needed!
 
 - The profile page won't display user data initially. I am shrugging this one off as my goal here is to demonstrate consuming Hasura's gql endpoint and only rely on auth0's idToken to do so.
