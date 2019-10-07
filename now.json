@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "build": {
+    "env": {
+      "AUTH0_DOMAIN": "@auth0-domain",
+      "AUTH0_CLIENT_ID": "@auth0-client-id",
+      "AUTH0_CLIENT_SECRET": "@auth0-client-secret",
+      "REDIRECT_URI": "https://nextjs-auth0-example.vgrafe.now.sh/api/callback",
+      "POST_LOGOUT_REDIRECT_URI": "https://nextjs-auth0-example.vgrafe.now.sh/",
+      "SESSION_COOKIE_SECRET": "@session-cookie-secret",
+      "HASURA_GRAPHQL_URL": "@hasura-graphql-url",
+      "SECURE_COOKIE": "true"
+    }
+  }
+}
