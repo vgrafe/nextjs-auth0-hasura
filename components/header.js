@@ -15,19 +15,19 @@ function Header({ user, loading }) {
               <a>About</a>
             </Link>
           </li>
-          <li>
-            <Link href="/graphql-ssr">
-              <a>graphql-ssr</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/graphql-static">
-              <a>graphql-static</a>
-            </Link>
-          </li>
           {!loading &&
             (user ? (
               <>
+                <li>
+                  <Link href="/graphql-ssr">
+                    <a>graphql-ssr</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/graphql-static">
+                    <a>graphql-static</a>
+                  </Link>
+                </li>
                 <li>
                   <Link href="/profile">
                     <a>profile</a>
