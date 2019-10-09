@@ -13,7 +13,7 @@ Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/)!
 
 ## Setup
 
-- clone
+- git clone this repository
 - spin up an Hasura instance
   - generate JWT secret, add it to env vars (HASURA_GRAPHQL_JWT_SECRET)
   - optionally add the HASURA_GRAPHQL_UNAUTHORIZED_ROLE var
