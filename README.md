@@ -2,6 +2,11 @@
 
 You might want to get familiar with [nextjs' auth0 example](https://github.com/zeit/next.js/tree/canary/examples/auth0) first. This template leans heavily on it, and just adds Hasura on top of it.
 
+## Features
+
+- ⚡️ uses Next.js 9 with Automatic Static Optimization
+- 🚫 no custom server code
+
 ## Demo
 
 Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/)!
