@@ -54,15 +54,15 @@
     "@apollo/react-hooks" "^3.1.2"
     tslib "^1.10.0"
 
-"@auth0/nextjs-auth0@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@auth0/nextjs-auth0/-/nextjs-auth0-0.2.0.tgz#c489fded6d10a5d28fc0485ff02e6394e28ed95c"
-  integrity sha512-uY5JuIEQ2rZWxNAgMIjd/8YRKyl6Xd3++Ow4qERqQGO4n5RymJBEBfRG/Xtt+HlWrt+W+7Xh8HxFgzYdLxOCxA==
+"@auth0/nextjs-auth0@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@auth0/nextjs-auth0/-/nextjs-auth0-0.4.0.tgz#1a91d73d8d7cf173c2492547e2103b06ad373278"
+  integrity sha512-isZvVpoyEArBS39/7Hv3LuAg9/xWcoGDYwTjRgVs6+gMOB4NCaNBbJs0Gy+CO22ffr6aCEUsn+ybUr7kZcTV/A==
   dependencies:
-    "@hapi/iron" "^5.1.1"
+    "@hapi/iron" "^5.1.4"
     base64url "^3.0.1"
     cookie "^0.4.0"
-    openid-client "^3.6.2"
+    openid-client "^3.7.2"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
   version "7.5.5"
@@ -870,23 +870,16 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-8.2.4.tgz#684a14f4ca35d46f44abc87dfc696e5e4fe8a020"
   integrity sha512-Ze5SDNt325yZvNO7s5C4fXDscjJ6dcqLFXJQ/M7dZRQCewuDj2iDUuBi6jLQt+APbW9RjjVEvLr35FXuOEqjow==
 
-"@hapi/iron@^5.1.1":
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/@hapi/iron/-/iron-5.1.2.tgz#ed33e2d17e198eebb3515eff5585ab5c54bbe4a5"
-  integrity sha512-lHekz++fMweft31Z/iel9SESwh+AaT6ViZLP++TORcquKjOit1GJq1rqCk+8UUQPCn7lJHamTeZHxXSCoyTa0Q==
+"@hapi/iron@^5.1.4":
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/@hapi/iron/-/iron-5.1.4.tgz#7406f36847f798f52b92d1d97f855e27973832b7"
+  integrity sha512-+ElC+OCiwWLjlJBmm8ZEWjlfzTMQTdgPnU/TsoU5QsktspIWmWi9IU4kU83nH+X/SSya8TP8h8P11Wr5L7dkQQ==
   dependencies:
     "@hapi/b64" "4.x.x"
     "@hapi/boom" "7.x.x"
     "@hapi/bourne" "1.x.x"
     "@hapi/cryptiles" "4.x.x"
     "@hapi/hoek" "8.x.x"
-
-"@panva/jose@^1.9.0":
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/@panva/jose/-/jose-1.9.2.tgz#3c42ca1f4e7ba13c75167e248b780c6348cbb37d"
-  integrity sha512-Uw/ggY8nlemS23Sec1ud6A09I0x6Hji7Ma2xe+EMP2FbkWRt1IAhoK0lBMmMsrsOLVXV/6udcq11MDaeef9jRA==
-  dependencies:
-    asn1.js "^5.1.1"
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -1326,7 +1319,7 @@ asn1.js@^4.0.0:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
 
-asn1.js@^5.1.1:
+asn1.js@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/asn1.js/-/asn1.js-5.2.0.tgz#292c0357f26a47802ac9727e8772c09c7fc9bd85"
   integrity sha512-Q7hnYGGNYbcmGrCPulXfkEw7oW7qjWeM4ZTALmgpuIcZLxyqqKYWxCZg2UBm8bklrnB4m2mGyJPWfoktdORD8A==
@@ -3205,6 +3198,13 @@ jest-worker@24.9.0:
     merge-stream "^2.0.0"
     supports-color "^6.1.0"
 
+jose@^1.10.0:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/jose/-/jose-1.10.1.tgz#c09876d99601a39b240a930d94529a2cbd514157"
+  integrity sha512-E6ev76KFgNT/+qN/owc7EYG7M3nJGSLguF7Jr2bpImUTpIwZS5ALsZA7l5/MOlVm52Kc+lcM/FeOfg3i/VG7qA==
+  dependencies:
+    asn1.js "^5.2.0"
+
 js-cookie@2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
@@ -3705,10 +3705,10 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-next@9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/next/-/next-9.1.0.tgz#f3bf82b333b2a4549cd9897487f5147a8a558878"
-  integrity sha512-6eTyOHPgpOONeOoV83mELr8RnktRePXtnhqUr03me0Ilbe8+Yd+5uHxuGRPGlFmgb8VM6HloUybY0/KpP9lJ9w==
+next@9.1.1:
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/next/-/next-9.1.1.tgz#bede2e834548020bc4d3be0c46e3ed7edaac6d14"
+  integrity sha512-++jiUA1GN/dOqe6+oLT78rdrRnPmf5yHUbug1tdZBYeQ6HE+ypDIeVelmCmyGx+JDNB3TcxNx5R2+D/Cbrwnng==
   dependencies:
     "@ampproject/toolbox-optimizer" "1.0.1"
     "@babel/core" "7.4.5"
@@ -3999,14 +3999,14 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-openid-client@^3.6.2:
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/openid-client/-/openid-client-3.7.2.tgz#1cdb6ea1d7470a4bf1be12d2e70914103b090952"
-  integrity sha512-1zt7SVpGC1oL8bcWgpCSdTLB04GWRotZvxvELxVIAAR8VhSlw+IxUVFXEJupmG7glnweMtRV4DMCs7y3vqEF+w==
+openid-client@^3.7.2:
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/openid-client/-/openid-client-3.7.3.tgz#05e544530780b03f9bbefd487a0c1f1a0b1da63b"
+  integrity sha512-t7GL9Yl9tL6ybY8040pzIVw8+akF5z3GgMEG8iZ2UbFfuMEXSKmHiCU00LvWF9dL4UNMlIjTSBpskQIIeJBwpw==
   dependencies:
-    "@panva/jose" "^1.9.0"
     base64url "^3.0.1"
     got "^9.6.0"
+    jose "^1.10.0"
     lodash "^4.17.13"
     lru-cache "^5.1.1"
     make-error "^1.3.5"
