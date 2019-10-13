@@ -6,6 +6,11 @@ function Header({ user, loading }) {
       <nav>
         <ul>
           <li>
+            <a href="https://github.com/vgrafe/nextjs-auth0-hasura">
+              <img src="/gh.png" alt="github logo" className="gh-logo" />
+            </a>
+          </li>
+          <li>
             <Link href="/">
               <a>Home</a>
             </Link>
@@ -51,6 +56,11 @@ function Header({ user, loading }) {
       </nav>
 
       <style jsx>{`
+        .gh-logo {
+          position: absolute;
+          left: 2em;
+          transform: translateY(-8px);
+        }
         header {
           padding: 0.2rem;
           color: #fff;
