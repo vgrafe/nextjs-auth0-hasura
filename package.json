@@ -9,6 +9,10 @@
   },
   "author": "vgrafe",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vgrafe/nextjs-auth0-hasura"
+  },
   "dependencies": {
     "@apollo/react-hooks": "3.1.3",
     "@apollo/react-ssr": "3.1.3",
