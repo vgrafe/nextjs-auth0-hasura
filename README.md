@@ -29,6 +29,7 @@ Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/)!
   - add env vars so the rules work
     - ADMIN_SECRET (same than HASURA_GRAPHQL_ADMIN_SECRET)
     - HASURA_GRAPHQL_URL
+  - set callback/redirect URL in your app
 - fill in `hasura/config.yaml` file
 - ```bash
   cd hasura
