@@ -1,6 +1,10 @@
 # NextJS - Auth0 - Hasura
 
-You might want to get familiar with [nextjs' auth0 example](https://github.com/zeit/next.js/tree/canary/examples/auth0) first. This template leans heavily on it, and just adds Hasura on top of it.
+This repo sits on the shoulders of the following giants:
+
+- https://github.com/auth0/nextjs-auth0
+- https://github.com/sandrinodimattia/nextjs-auth0-example
+- https://github.com/zeit/next.js/tree/canary/examples/auth0
 
 ## Features
 
@@ -25,7 +29,7 @@ Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/)!
   - set an HASURA_GRAPHQL_ADMIN_SECRET
 - setup an Auth0 account
   - copy domain, client ID, secret into `.env` file
-  - add rules found in `auth0` folder
+  - add rules found in `auth0` folder (looks like `upsert-user.js` should be above the claim one)
   - add env vars so the rules work
     - ADMIN_SECRET (same than HASURA_GRAPHQL_ADMIN_SECRET)
     - HASURA_GRAPHQL_URL
