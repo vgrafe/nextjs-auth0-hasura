@@ -11,6 +11,11 @@ This repo sits on the shoulders of the following giants:
 - ⚡️ uses Next.js 9 with Automatic Static Optimization
 - 🚫 no custom server code
 
+## Shortcomings - help appreciated!
+
+- the idToken is set/get in a cookie with `js-cookie` in order to add to the headers for calls to hasura (look for all the "TODO remove when cookie solution found" comments). It should be handled out of the box by `nextjs-auth0`, so this might be a mistake/overlook of mine.
+- login is janky when using a social button. I don't have much time to troubleshoot this either.
+
 ## Demo
 
 Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/)!
