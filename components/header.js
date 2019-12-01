@@ -34,13 +34,13 @@ function Header({ user, loading }) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/profile">
-                    <a>profile</a>
+                  <Link href="/session">
+                    <a>session</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/advanced/ssr-profile">
-                    <a>ssr-profile</a>
+                  <Link href="/advanced/ssr-session">
+                    <a>ssr-session</a>
                   </Link>
                 </li>
                 <li>
@@ -67,7 +67,7 @@ function Header({ user, loading }) {
           background-color: #333;
         }
         nav {
-          max-width: 42rem;
+          max-width: 50rem;
           margin: 1.5rem auto;
         }
         ul {

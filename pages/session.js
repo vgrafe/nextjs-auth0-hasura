@@ -5,29 +5,30 @@ import React from 'react';
 import { useFetchUser } from '../lib/user';
 import Layout from '../components/layout';
 
-function ProfileCard({ user }) {
+function SessionCard({ user }) {
   return (
     <>
-      <h1>Profile</h1>
+      <h1>Session</h1>
 
       <div>
-        <h3>Profile (client rendered)</h3>
+        <h3>Session (client rendered)</h3>
         <img src={user.picture} alt="user picture" />
         <p>nickname: {user.nickname}</p>
         <p>name: {user.name}</p>
+        <pre>{JSON.stringify(user, null, 2)}</pre>
       </div>
     </>
   );
 }
 
-function Profile() {
+function Session() {
   const { user, loading } = useFetchUser({ required: true });
 
   return (
     <Layout user={user} loading={loading}>
-      {loading ? <>Loading...</> : <ProfileCard user={user} />}
+      {loading ? <>Loading...</> : <SessionCard user={user} />}
     </Layout>
   );
 }
 
-export default Profile;
+export default Session;

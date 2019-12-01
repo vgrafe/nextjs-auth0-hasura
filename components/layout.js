@@ -16,7 +16,7 @@ function Layout({ user, loading = false, children }) {
 
       <style jsx>{`
         .container {
-          max-width: 42rem;
+          max-width: 50rem;
           margin: 1.5rem auto;
         }
       `}</style>
