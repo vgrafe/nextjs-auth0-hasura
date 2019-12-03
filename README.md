@@ -49,6 +49,11 @@ Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/)!
   yarn dev
   ```
 
+## Deploy with zeit's now
+
+- Update `REDIRECT_URI` and `POST_LOGOUT_REDIRECT_URI` in the `now.json` file
+- add all the secrets (start with @ in the file) [with the cli](https://zeit.co/docs/v2/build-step/#using-environment-variables-and-secrets)
+
 ## Notes
 
 - [How to](https://dev.to/mikewheaton/public-graphql-queries-with-hasura-2n06) set up public access on hasura.
