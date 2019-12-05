@@ -11,11 +11,6 @@ This repo sits on the shoulders of the following giants:
 - ⚡️ uses Next.js 9 with Automatic Static Optimization
 - 🚫 no custom server code
 
-## Shortcomings - help appreciated!
-
-- the idToken is set/get in a cookie with `js-cookie` in order to add to the headers for calls to hasura (look for all the "TODO remove when cookie solution found" comments). It should be handled out of the box by `nextjs-auth0`, so this might be a mistake/overlook of mine.
-- login is janky when using a social button. I don't have much time to troubleshoot this either.
-
 ## Demo
 
 Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/)!
@@ -24,6 +19,8 @@ Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/)!
 
 - The profile page won't display user data initially. I am shrugging this one off as my goal here is to demonstrate consuming Hasura's gql endpoint and only rely on auth0's idToken to do so.
 - I can't find out how to seamlessly pass the token via cookies as suggested from [Apollo's](https://github.com/apollographql/apollo-client/issues/4455) [documentation](https://github.com/apollographql/apollo-client/issues/4190) and [issues](https://github.com/apollographql/apollo-client/issues/41900). The current workaround is to set cookie manually after auth, but it's ugly and feels unnecessary when if should be provided out of the box by Apollo.
+- the idToken is set/get in a cookie with `js-cookie` in order to add to the headers for calls to hasura (look for all the "TODO remove when cookie solution found" comments). It should be handled out of the box by `nextjs-auth0`, so this might be a mistake/overlook of mine.
+- login is janky when using a social button. I don't have much time to troubleshoot this either.
 
 ## Setup
 
