@@ -8,12 +8,12 @@ This repo sits on the shoulders of the following giants:
 
 ## Features
 
-- ⚡️ uses Next.js 9 with Automatic Static Optimization
+- ⚡️ compatible with Next.js 9's Automatic Static Optimization
 - 🚫 no custom server code
 
 ## Demo
 
-Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/)!
+Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/) - please note: the heroku instance might be inactive when you try logging in, resulting in a failed attempt. Try again and it will work. Damn cold starts!
 
 ## Shortcomings - Help needed!
 
