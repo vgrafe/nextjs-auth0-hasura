@@ -13,7 +13,26 @@ This repo sits on the shoulders of the following giants:
 
 ## Demo
 
-Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/) - please note: the heroku instance might be inactive when you try logging in, resulting in a failed attempt. Try again and it will work. Damn cold starts!
+Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/)
+
+Please note: the heroku instance might be inactive when you try logging in, resulting in a failed attempt. Try again and it will work. Damn cold starts!
+
+One way I found to avoid this is to make a dummy http call to the heroku instance in an `_app.js` file:
+
+```js
+import App from 'next/app';
+
+fetch(process.env.HASURA_GRAPHQL_URL); // wake up that darn instance!
+
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+    return <Component {...pageProps} />;
+  }
+}
+
+export default MyApp;
+```
 
 ## Shortcomings - Help needed!
 
