@@ -21,6 +21,7 @@ One way I found to avoid this is to make a dummy http call to the heroku instanc
 
 ```js
 import App from 'next/app';
+import fetch from 'isomorphic-unfetch';
 
 fetch(process.env.HASURA_GRAPHQL_URL); // wake up that darn instance!
 
