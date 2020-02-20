@@ -41,6 +41,7 @@ export default MyApp;
 - I can't find out how to seamlessly pass the token via cookies as suggested from [Apollo's](https://github.com/apollographql/apollo-client/issues/4455) [documentation](https://github.com/apollographql/apollo-client/issues/4190) and [issues](https://github.com/apollographql/apollo-client/issues/41900). The current workaround is to set cookie manually after auth, but it's ugly and feels unnecessary when if should be provided out of the box by Apollo.
 - the idToken is set/get in a cookie with `js-cookie` in order to add to the headers for calls to hasura (look for all the "TODO remove when cookie solution found" comments). It should be handled out of the box by `nextjs-auth0`, so this might be a mistake/overlook of mine.
 - login is janky when using a social button. I don't have much time to troubleshoot this either.
+- a proxi api route should be used to avoid exposing the id token in the client, as explained [here](https://github.com/auth0/nextjs-auth0/issues/67#issuecomment-581599845)
 
 ## Setup
 
