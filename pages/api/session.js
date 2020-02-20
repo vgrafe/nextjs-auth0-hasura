@@ -7,7 +7,6 @@ export default async function session(req, res) {
     if (s) res.send(s);
     res.status(500).end(s);
   } catch (error) {
-    console.error(error);
     res.status(error.status || 500).end(error.message);
   }
 }
