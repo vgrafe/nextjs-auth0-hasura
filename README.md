@@ -55,14 +55,16 @@ export default MyApp;
   1. Set allowed callback URLs:
   ```
   http://localhost:3000/api/callback,
-  https://*.vercel.app/api/callback,
+  https://*.YOUR-VECEL-ORG.vercel.app/api/callback,
   https://www.YOUR-PRODUCTION-DOMAIN.com/api/callback
   ```
+  These are used in development, preview, and production callbacks, respectively.
   1. Set logout URLs:
   ```
   http://localhost:3000/,
-  https://*.vercel.app/,
+  https://*.YOUR-VECEL-ORG.vercel.app/,
   https://www.YOUR-PRODUCTION-DOMAIN.com/
+  These are used in development, preview, and production redirects after the user logs out from Auth0.
   ```
 - Hasura
   1. Create a Hasura instance. If you're using Hasura Cloud, you'll need a Postgres database URL that looks like `postgresql://user:password@host:5342/dbname`. Once online, set the environment variables:
@@ -121,16 +123,11 @@ export default MyApp;
   vercel env add SECURE_COOKIE         # asdf1234
   vercel env add HASURA_GRAPHQL_URL    # https://adjective-noun-12.hasura.app
   ```
-- Add vercel environment variables for **DEVELOPMENT**:
-  ```bash
-  vercel env add REDIRECT_URI # http://localhost:3000/api/callback
-  vercel env add POST_LOGOUT_REDIRECT_URI # http://localhost:3000
-  ```
 - No need to add Vercel environment variables for **PREVIEW**, they are calculated at runtime since preview URLs change.
 - Add vercel environment variables for **PRODUCTION**:
   ```bash
-  vercel env add REDIRECT_URI # https://www.example.com/api/callback on production
-  vercel env add POST_LOGOUT_REDIRECT_URI # https://www.example.com on production
+  vercel env add REDIRECT_URI # https://www.example.com/api/callback
+  vercel env add POST_LOGOUT_REDIRECT_URI # https://www.example.com
   ```
 
 ## Notes
