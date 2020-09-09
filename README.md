@@ -124,6 +124,7 @@ export default MyApp;
   vercel env add HASURA_GRAPHQL_URL    # https://adjective-noun-12.hasura.app
   ```
 - No need to add Vercel environment variables for **PREVIEW**, they are calculated at runtime since preview URLs change.
+- No need to add Vercel environment variables for **DEVELOPMENT**, if they aren't set they default to an appropriate `localhost:3000` URL.
 - Add vercel environment variables for **PRODUCTION**:
   ```bash
   vercel env add REDIRECT_URI # https://www.example.com/api/callback
