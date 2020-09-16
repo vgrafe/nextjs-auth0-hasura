@@ -13,7 +13,7 @@ This repo sits on the shoulders of the following giants:
 
 ## Demo
 
-Try it [here](https://nextjs-auth0-hasura.vgrafe.now.sh/)
+Try it [here](https://nextjs-auth0-hasura.vercel.app)
 
 Please note: the heroku instance might be inactive when you try logging in, resulting in a failed attempt. Try again and it will work. Damn cold starts!
 
