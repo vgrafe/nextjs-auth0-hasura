@@ -2,7 +2,7 @@ import auth0 from '../../lib/auth0';
 
 export default async function session(req, res) {
   try {
-    const s = await auth0.getSession(req);
+    const s = await auth0(req).getSession(req);
 
     if (s) res.send(s);
     res.status(500).end(s);
