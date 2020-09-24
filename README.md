@@ -1,3 +1,7 @@
+# Deprecated!
+
+Here it is folks, I can not take the time maintaining this project anymore, also since then [the Hasura team is offering a guide](https://hasura.io/learn/graphql/nextjs-fullstack-serverless/introduction/?utm_campaign=learn&utm_medium=social&utm_source=twitter) to have a setup with Nextjs and Auth0 that is definitely better and more secure than this one. Thank you for your interest.
+
 # NextJS - Auth0 - Hasura
 
 This repo sits on the shoulders of the following giants:
